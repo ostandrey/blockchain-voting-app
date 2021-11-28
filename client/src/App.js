@@ -1,9 +1,14 @@
 import React, {useEffect, useState} from 'react'
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
 import Web3 from 'web3'
 import './App.css';
 import Electionabi from './contracts/Election.json'
 import Navbar from './Navbar';
-import Body from './Body';
+import Voting from './components/Voting';
+import About from "./components/About";
+import Home from './components/Home';
+import Account from './components/Account';
 
 function App() {
 
@@ -76,11 +81,22 @@ function App() {
         Loading...
       </div>
   }
-
   return (
-    <div>
+    <div className='h-100'>
+      <Router>
       <Navbar account={currentAccount}></Navbar>
-      <Body candidate1={candidate1} candidate2={candidate2} voteCandidate={voteCandidate} account={currentAccount}></Body>
+      <Switch>
+        <Route path='/' exact component={Home} />
+        <Route path='/home' component={Home} />
+        <Route path='/about' component={About} />
+        <Route path='/vote'>
+          <Voting candidate1={candidate1} candidate2={candidate2} voteCandidate={voteCandidate} account={currentAccount}></Voting>
+        </Route>
+        <Route path='/account' component={Account}>
+          <Account account={currentAccount}></Account>
+        </Route>
+      </Switch>
+    </Router>
     </div>
   );
 }
