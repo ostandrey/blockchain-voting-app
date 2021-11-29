@@ -56,7 +56,7 @@ const Voting = ({candidate1, candidate2, voteCandidate, account}) => {
         <div class='container'>
             <div class='row my-5'>
                 <div class='col'>
-                    <img src={Vote} alt="Responsive" class="img-fluid" height='400'/>
+                    <img src={Vote} alt="Responsive" class="img-fluid" />
                 </div>
                 <div class='col'>
                     <div class="mt-4 text-center" style={{color: "#000000"}}>
