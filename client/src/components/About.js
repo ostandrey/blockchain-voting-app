@@ -3,6 +3,11 @@ import {  Link } from "react-router-dom";
 import Vote from '../assets/4427.jpg'
 
 const About = () => {
+
+  const imageStyle = {
+    padding: '0 100px'
+  }
+
   return (
     <div class='container'>
       <div class='my-5'>
@@ -13,7 +18,7 @@ const About = () => {
         <hr/>
         <h3>Posted on October 19, 2021 at 12:00 PM</h3>
         <hr/>
-        <img src={Vote} alt="Vote image" class="img-fluid"/>
+        <img src={Vote} alt='vote' class="img-fluid" style={imageStyle}/>
         <hr/>
         <h2>Standing in the queue and waiting for your turn to cast vote is a part of a history now.</h2>
         <p>
