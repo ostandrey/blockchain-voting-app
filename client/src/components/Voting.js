@@ -227,7 +227,7 @@ const Voting = () => {
                                 </option>
                             </select>
                             <button className='btn btn-primary mt-2 btn-md w-100'>
-                                Vote Candidate: {''} {Candidate}
+                                Vote Value: {''} {Candidate}
                             </button>
                         </form>
                     </div>
